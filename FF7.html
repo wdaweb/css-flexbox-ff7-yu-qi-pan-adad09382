@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FF7</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./bg-full.jpg");
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      #main {
+        width: 80vw;
+        height: 80vh;
+        border: 2px solid #aaa;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-image: linear-gradient(#aaa 50%, #000 50%);
+      }
+      #left {
+        width: 40vw;
+        height: 80vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./main.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #left img {
+        width: 30%;
+      }
+      #left h1 {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+      #left p {
+        width: 75%;
+        color: #fff;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      #top,
+      #button {
+        width: 40vw;
+        height: 50%;
+      }
+      #top {
+        background-image: url("./cloud.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        display: flex;
+        align-items: center;
+      }
+      #top span,
+      #button span {
+        font-size: 2.5rem;
+      }
+      #top p {
+        width: 60%;
+        font-size: 1.25rem;
+        margin-left: 1.5rem;
+      }
+      #button p {
+        width: 60%;
+        font-size: 1.25rem;
+        margin-right: 1.5rem;
+      }
+      #button {
+        background-image: url("./tifa.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #fff;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="left">
+        <img src="./ps4-ff7.png" alt="" />
+        <h1>AVAILABLE NOW</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          nihil esse eligendi iusto praesentium, explicabo ipsa eos corrupti
+          consectetur ducimus? Harum distinctio sunt ipsa fugit ipsum dolor sit
+          amet consectetur adipisicing elit. Cupiditate nihil esse eligendi
+          iusto praesentium, explicabo ipsa eos corrupti consectetur ducimus?
+          Harum distinctio sunt ipsa fugit.
+        </p>
+      </div>
+      <div id="top">
+        <p>
+          <span>Cloud</span><br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
+          ea? Ullam optio sapiente illo cupiditate iusto, aut incidunt
+          aspernatur et qui ipsum nostrum consectetur. Assumenda quis voluptatem
+          harum voluptas vero et ipsam nam consequatur omnis sunt!
+        </p>
+      </div>
+      <div id="button">
+        <p>
+          <span>Tifa</span><br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
+          ea? Ullam optio sapiente illo cupiditate iusto, aut incidunt
+          aspernatur et qui ipsum nostrum consectetur. Assumenda quis voluptatem
+          harum voluptas vero et ipsam nam consequatur omnis sunt!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

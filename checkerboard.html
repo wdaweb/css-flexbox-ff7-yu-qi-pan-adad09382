@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>棋盤</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      body {
+        overflow: hidden;
+        margin-left: 350px;
+        display: flex;
+      }
+      .d-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .row {
+        width: 2000px;
+        height: 1200px;
+        margin: auto;
+      }
+
+      .col {
+        margin: 10px;
+      }
+      .flex-basis {
+        flex-basis: 0;
+        width: 1000px;
+      }
+      .text {
+        writing-mode: vertical-lr;
+        font-size: 45px;
+        font-family: "標楷體";
+        padding-top: 1rem;
+      }
+      .chesses {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 40px;
+        font-family: "標楷體";
+        background: #fff;
+        z-index: 1;
+      }
+
+      .skeleton {
+        margin-top: 25px;
+        position: relative;
+        width: 800px;
+        height: 900px;
+        display: flex;
+        border: 1px solid #000;
+        justify-content: space-around;
+      }
+      .chess {
+        display: flex;
+        writing-mode: vertical-lr;
+        align-content: stretch;
+        justify-content: space-between;
+        width: 30px;
+        height: 860px;
+        margin: 20px 40px 0px 20px;
+      }
+      .red {
+        color: red;
+      }
+      .boxes {
+        margin-top: 25px;
+        width: 720px;
+        height: 810px;
+        border: 1px solid #000;
+        position: relative;
+        top: 50px;
+        right: 1050px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .box {
+        width: 90px;
+        height: 90px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+      .box2 {
+        width: 90px;
+        height: 90px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+      .slash-135-deg {
+        background-image: linear-gradient(135deg, #fff 49%, #000 50%, #fff 51%);
+      }
+      .slash-45-deg {
+        background-image: linear-gradient(45deg, #fff 49%, #000 50%, #fff 51%);
+      }
+      .cross {
+        width: 720px;
+        height: 90px;
+        display: flex;
+        font-size: 50px;
+        font-family: "標楷體";
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row d-flex">
+      <div class="col flex-basis text">
+        棋盤裡，車無輪，馬無韁，叫聲將軍提防提防
+      </div>
+      <div class="skeleton">
+        <div class="chess">
+          <div class="chesses">車</div>
+          <div class="chesses">卒</div>
+          <div class="chesses red">兵</div>
+          <div class="chesses red">俥</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">馬</div>
+          <div class="chesses" style="margin: -1px auto 280px">包</div>
+          <div class="chesses red">炮</div>
+          <div class="chesses red">傌</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">象</div>
+          <div class="chesses">卒</div>
+          <div class="chesses red">兵</div>
+          <div class="chesses red">相</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">士</div>
+          <div class="chesses red">仕</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">將</div>
+          <div class="chesses">卒</div>
+          <div class="chesses red">兵</div>
+          <div class="chesses red">帥</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">士</div>
+          <div class="chesses red">仕</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">象</div>
+          <div class="chesses">卒</div>
+          <div class="chesses red">兵</div>
+          <div class="chesses red">相</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">馬</div>
+          <div class="chesses" style="margin: -1px auto 280px">包</div>
+          <div class="chesses red">炮</div>
+          <div class="chesses red">傌</div>
+        </div>
+
+        <div class="chess">
+          <div class="chesses">車</div>
+          <div class="chesses">卒</div>
+          <div class="chesses red">兵</div>
+          <div class="chesses red">俥</div>
+        </div>
+      </div>
+
+      <div class="col flex-basis text">
+        圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑
+      </div>
+      <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box slash-45-deg"></div>
+        <div class="box slash-135-deg"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box slash-135-deg"></div>
+        <div class="box slash-45-deg"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box cross">楚河 &nbsp; &nbsp; 漢界</div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2 slash-45-deg"></div>
+        <div class="box2 slash-135-deg"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2 slash-135-deg"></div>
+        <div class="box2 slash-45-deg"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+      </div>
+    </div>
+  </body>
+</html>
